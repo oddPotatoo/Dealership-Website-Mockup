@@ -1,14 +1,32 @@
 <!-- HEADER -->
-<header class="container-fluid header-section">
+<header class="header-section">
   <div class="container">
-    <div class="row header-content">
+    <div class="row header-content align-items-center">
       <!-- Logo -->
-      <div class="col-sm-3 col-xs-12">
+      <div class="col-md-3 col-xs-6">
         <a href="#"><img src="assets/logo.png" alt="Logo" class="logo img-responsive"></a>
       </div>
 
+      <!-- Mobile Icons -->
+      <div class="col-xs-6 mobile-icons text-right">
+        <div class="mobile-header-right">
+          <a href="#" class="mobile-icon">
+            <i class="fa fa-map-marker"></i>
+          </a>
+          <a href="#" class="mobile-icon">
+            <i class="fa fa-phone"></i>
+          </a>
+          <a href="#" class="mobile-icon search-toggle">
+            <i class="fa fa-search"></i>
+          </a>
+          <button class="mobile-icon hamburger-toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
       <!-- Header Right Info -->
-      <div class="col-sm-9 col-xs-12 header-right">
+      <div class="col-md-9 col-xs-12 header-right">
         <!-- Top row: Address and Phone -->
         <div class="top-info">
           <span class="address-header"><i class="fa fa-map-marker"></i> 17979 NE Glisan St, Portland, OR 97230</span>
@@ -33,12 +51,35 @@
   </div>
 </header>
 
+<!-- Mobile Search Bar -->
+<div class="mobile-search-bar">
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" class="form-control" placeholder="SEARCH RIDES">
+      <i class="fa fa-search search-icon"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Navigation Menu -->
+<nav class="mobile-nav-menu">
+  <ul>
+    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="#"><i class="fa fa-tag"></i> Amazing Deals</a></li>
+    <li><a href="#"><i class="fa fa-motorcycle"></i> Motorcycles</a></li>
+    <li><a href="#"><i class="fa fa-wrench"></i> Service</a></li>
+    <li><a href="#"><i class="fa fa-cogs"></i> Parts</a></li>
+    <li><a href="#"><i class="fa fa-money"></i> Financing</a></li>
+    <li><a href="#"><i class="fa fa-info-circle"></i> About Us</a></li>
+  </ul>
+</nav>
+
 <!-- BANNER -->
 <section class="banner-section" style="background-image: url('assets/banner.png');">
   <div class="overlay">
     <div class="container text-center banner-content">
-      <!-- Navigation -->
-      <nav class="banner-nav-top">
+      <!-- Desktop Navigation -->
+      <nav class="banner-nav-top desktop-only">
         <ul class="list-inline">
           <li><a href="#"><i class="fa fa-home"></i></a></li>
           <li><a href="#">AMAZING DEALS</a></li>
@@ -52,10 +93,10 @@
 
       <!-- Banner Text -->
       <h1 class="banner-title">Welcome to Triumph of Anytown</h1>
-      <p class="banner-subtitle">LIVE THE PASSION, TAKE THE RIDE.</p>
+      <p class="banner-subtitle desktop-only">LIVE THE PASSION, TAKE THE RIDE.</p>
 
-      <!-- Search Bar -->
-      <div class="search-bar">
+      <!-- Desktop Search Bar -->
+      <div class="search-bar desktop-only">
         <input type="text" class="form-control" placeholder="SEARCH RIDES">
         <i class="fa fa-search search-icon"></i>
       </div>
