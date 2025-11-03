@@ -131,7 +131,7 @@ i.fa-map-marker {
   color: white;
   font-weight: 600;
   text-decoration: none;
-  padding: 5px 25px; /* Equal left/right padding */
+  padding: 5px 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +141,6 @@ i.fa-map-marker {
   height: 100%;
 }
 
-/* Banner nav container uses flex — no inline-block gaps */
 .banner-nav-top {
   display: flex;
   justify-content: center;
@@ -394,12 +393,10 @@ i.fa-map-marker {
     margin-bottom: 5px;
   }
   
-  /* Show mobile search when toggled */
   .mobile-search-bar.active {
     display: block;
   }
   
-  /* Adjust logo size for mobile */
   .logo {
     max-height: 50px;
   }
@@ -421,7 +418,6 @@ i.fa-map-marker {
   }
 }
 
-/* Small mobile adjustments */
 @media (max-width: 480px) {
   .mobile-header-right {
     gap: 10px;
@@ -488,9 +484,9 @@ i.fa-map-marker {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 600px; /* overall section height */
+  min-height: 600px;
   display: flex;
-  align-items: center; /* vertical centering of all content */
+  align-items: center;
   font-family: 'Teko', sans-serif;
   color: #fff;
 }
@@ -520,7 +516,6 @@ i.fa-map-marker {
   margin-bottom: 30px;
 }
 
-/* “PROMOTIONS” and “EVENTS” side-by-side */
 .expandable {
   display: flex;
   justify-content: flex-start;
@@ -721,7 +716,6 @@ i.fa-map-marker {
     transition: none;
   }
 
-
   .split-panel:hover {
     flex: none;
     opacity: 1;
@@ -814,7 +808,6 @@ i.fa-map-marker {
   color: #fff;
 }
 
-/* Carousel controls */
 .carousel-control.left,
 .carousel-control.right {
   margin-left: -150px;
@@ -827,7 +820,6 @@ i.fa-map-marker {
   font-size: 24px;
 }
 
-/* Carousel indicators (dots) */
 .carousel-indicators {
   bottom: -50px;
 }
@@ -906,7 +898,6 @@ i.fa-map-marker {
   color: #fff;
 }
 
-/* Right Carousel */
 .team-carousel {
   display: flex;
   align-items: center;
@@ -926,7 +917,6 @@ i.fa-map-marker {
   transform: scale(1.05);
 }
 
-/* Carousel Indicators */
 #teamCarousel .carousel-indicators {
   bottom: -35px;
 }
@@ -946,7 +936,6 @@ i.fa-map-marker {
   height: 12px;
 }
 
-/* Carousel Controls */
 #teamCarousel .carousel-control.left,
 #teamCarousel .carousel-control.right {
   background: none;
@@ -1170,7 +1159,7 @@ i.fa-map-marker {
 .map-section {
   position: relative;
   width: 100%;
-  min-height: 600px; /* guarantees 600px minimum height */
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -1183,11 +1172,10 @@ i.fa-map-marker {
   flex: 1;
   width: 100%;
   height: 100%;
-  min-height: 600px; /* ensures visible area */
+  min-height: 600px;
   border: none;
 }
 
-/* Responsive height adjustments */
 @media (max-width: 991px) {
   .map-section {
     min-height: 500px;
@@ -1223,7 +1211,6 @@ i.fa-map-marker {
   letter-spacing: 1px;
 }
 
-/* Review Card */
 .review-card {
   background: #f9f9f9;
   border-radius: 8px;
@@ -1239,7 +1226,6 @@ i.fa-map-marker {
   transform: translateY(-4px);
 }
 
-/* Header: avatar + name + google icon */
 .review-header {
   display: flex;
   align-items: center;
@@ -1282,7 +1268,6 @@ i.fa-map-marker {
   height: 20px;
 }
 
-/* Stars */
 .stars {
   color: #f4b400;
   font-size: 14px;
@@ -1290,7 +1275,6 @@ i.fa-map-marker {
   margin-bottom: 10px;
 }
 
-/* Review Text */
 .review-card p {
   font-size: 14px;
   color: #333;
@@ -1298,7 +1282,6 @@ i.fa-map-marker {
   margin-bottom: 10px;
 }
 
-/* Button */
 .btn-read {
   font-size: 13px;
   font-weight: 600;
@@ -1311,7 +1294,6 @@ i.fa-map-marker {
   border-bottom: 1px solid #EB1024;
 }
 
-/* Layout */
 .reviews-desktop {
   display: flex;
   justify-content: space-around;
@@ -1322,7 +1304,6 @@ i.fa-map-marker {
   display: none;
 }
 
-/* Tablet and Mobile */
 @media (max-width: 991px) {
   .reviews-desktop {
     display: none;
@@ -1434,7 +1415,6 @@ i.fa-map-marker {
   margin-top: 0;
 }
 
-/* Left side dark gray */
 .dark-side {
   background-color: #282828;
   color: #fff;
@@ -1445,7 +1425,6 @@ i.fa-map-marker {
   padding: 0 40px;
 }
 
-/* Contact Column */
 .contact-column {
   padding-right: 40px;
 }
@@ -1459,7 +1438,7 @@ i.fa-map-marker {
 .phone {
   font-size: 22px;
   margin-bottom: 15px;
-  width: 100%; /* Remove the 45% constraint */
+  width: 100%;
   line-height: 1.4;
 }
 
@@ -1468,7 +1447,6 @@ i.fa-map-marker {
   margin-right: 8px;
 }
 
-/* Divider between upper and lower part */
 .divider-red {
   width: 70%;
   height: 1px;
@@ -1498,7 +1476,6 @@ i.fa-map-marker {
   margin-right: 8px;
 }
 
-/* Hours Column */
 .hours-column {
   padding-left: 40px;
 }
@@ -1518,7 +1495,6 @@ i.fa-map-marker {
   font-weight: 600;
 }
 
-/* Hours List */
 .hours-list {
   list-style: none;
   padding: 0;
@@ -1538,14 +1514,12 @@ i.fa-map-marker {
   margin-right: 15px;
 }
 
-/* Right side white */
 .light-side {
   background-color: #fff;
   color: #000;
   padding: 60px 40px;
 }
 
-/* Quick Links Area */
 .quick-links h4 {
   color: #E70033;
   font-weight: 600;
@@ -1572,7 +1546,6 @@ i.fa-map-marker {
   color: #E70033;
 }
 
-/* Divider between upper and lower part */
 .divider-black {
   width: 70%;
   height: 1px;
@@ -1580,7 +1553,6 @@ i.fa-map-marker {
   margin: 30px 0;
 }
 
-/* Social Icons */
 .social-icons a {
   color: #E70033;
   font-size: 26px;
@@ -1721,7 +1693,7 @@ i.fa-map-marker {
   font-size: 13px;
 }
 
-/* Lower Footer - Disclaimer */
+/* Lower Footer */
 .lower-footer {
   margin-top: 15px;
 }
@@ -1781,7 +1753,6 @@ i.fa-map-marker {
     gap: 10px;
   }
 
-  /* Correct element order */
   .footer-left {
     order: 1;
     align-items: center;
@@ -1821,7 +1792,6 @@ i.fa-map-marker {
   }
 }
 
-/* Small Mobile Styles */
 @media (max-width: 480px) {
   .footer-section {
     padding: 15px 0 10px;
