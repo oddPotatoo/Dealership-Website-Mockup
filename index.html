@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triumph of Anytown</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header included via JavaScript -->
+  <div id="header"></div>
+
+  <!-- MOTORCYCLE CLASS OPTIONS -->
+  <section class="motorcycle-classes text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2 col-xs-6">
+          <img src="assets/adventure.png" alt="Adventure" class="img-responsive center-block">
+          <p>ADVENTURE</p>
+          <button class="btn btn-shop">SHOP NOW</button>
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img src="assets/modern-classics.png" alt="Modern Classics" class="img-responsive center-block">
+          <p>MODERN CLASSICS</p>
+          <button class="btn btn-shop">SHOP NOW</button>
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img src="assets/motocross.png" alt="Motocross" class="img-responsive center-block">
+          <p>MOTOCROSS</p>
+          <button class="btn btn-shop">SHOP NOW</button>
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img src="assets/roadsters.png" alt="Roadsters" class="img-responsive center-block">
+          <p>ROADSTERS</p>
+          <button class="btn btn-shop">SHOP NOW</button>
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img src="assets/rocket-3.png" alt="Rocket 3" class="img-responsive center-block">
+          <p>ROCKET 3</p>
+          <button class="btn btn-shop">SHOP NOW</button>
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img src="assets/sport.png" alt="Sport" class="img-responsive center-block">
+          <p>SPORT</p>
+          <button class="btn btn-shop">SHOP NOW</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE (SECOND BANNER) -->
+  <section class="second-banner" style="background-image:url('assets/banner-2.png');"></section>
+
+  <!-- CURRENT PROMOTIONS & EVENTS -->
+  <section class="promotions-section" style="background-image:url('assets/cover.png');">
+    <div class="container promo-container">
+      <div class="row">
+        <div class="col-md-6 promo-text">
+          <h2>VIEW CURRENT PROMOTIONS AND EVENTS</h2>
+          <div class="expandable">
+            <div class="expand-item">
+              <div class="expand-header" data-toggle="collapse" data-target="#promoList">
+                PROMOTIONS <i class="fa fa-angle-right"></i>
+              </div>
+              <ul id="promoList" class="collapse">
+                <li>Promo Item 1</li>
+                <li>Promo Item 2</li>
+                <li>Promo Item 3</li>
+              </ul>
+            </div>
+
+            <div class="expand-item">
+              <div class="expand-header" data-toggle="collapse" data-target="#eventList">
+                EVENTS <i class="fa fa-angle-right"></i>
+              </div>
+              <ul id="eventList" class="collapse">
+                <li>Event Item 1</li>
+                <li>Event Item 2</li>
+                <li>Event Item 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 promo-image">
+          <img src="assets/event-main.png" alt="Events" class="img-responsive center-block">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEST RIDE & PARTS SECTION -->
+  <section class="ride-parts-section">
+    <div class="split-container">
+      <a href="#" class="split-panel test-ride">
+        <div class="overlay-content">
+          <h2>TEST RIDE</h2>
+          <i class="fa fa-motorcycle"></i>
+        </div>
+      </a>
+      <a href="#" class="split-panel parts-accessories">
+        <div class="overlay-content">
+          <h2>PARTS & ACCESSORIES</h2>
+          <i class="fa fa-cogs"></i>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED VEHICLES SECTION ===== -->
+  <section class="featured-vehicles text-center">
+    <div class="container">
+      <h2 class="section-title">FEATURED VEHICLES</h2>
+
+      <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#featuredCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#featuredCarousel" data-slide-to="1"></li>
+          <li data-target="#featuredCarousel" data-slide-to="2"></li>
+          <li data-target="#featuredCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+          <!-- SLIDE 1 -->
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-1.jpg" alt="Feature 1" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-2.jpg" alt="Feature 2" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-3.jpg" alt="Feature 3" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-4.jpg" alt="Feature 4" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATE SLIDES FOR SWIPE EFFECT -->
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-1.jpg" alt="Feature 1" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-2.jpg" alt="Feature 2" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-3.jpg" alt="Feature 3" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-4.jpg" alt="Feature 4" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details">
+                    <i class="fa fa-info-circle"></i> View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- More slides (reuse images as placeholders) -->
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-1.jpg" alt="Feature 1" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details"><i class="fa fa-info-circle"></i> View Details</button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-2.jpg" alt="Feature 2" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details"><i class="fa fa-info-circle"></i> View Details</button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-3.jpg" alt="Feature 3" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details"><i class="fa fa-info-circle"></i> View Details</button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="vehicle-card">
+                  <img src="assets/feature-4.jpg" alt="Feature 4" class="img-responsive center-block">
+                  <h4>Used 2018 Triumph STREET TRIPLE R</h4>
+                  <p>Price: $6,895</p>
+                  <p>Stock#: TCR297B</p>
+                  <button class="btn btn-details"><i class="fa fa-info-circle"></i> View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <a class="left carousel-control" href="#featuredCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#featuredCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR TEAM SECTION ===== -->
+  <section class="our-team">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- LEFT TEXT PART -->
+        <div class="col-md-6 team-text">
+          <div class="text-container">
+            <h2>Meet Our Team</h2>
+            <button class="btn btn-meet-staff">MEET OUR STAFF</button>
+          </div>
+        </div>
+
+        <!-- RIGHT CAROUSEL PART -->
+        <div class="col-md-6 team-carousel">
+          <div id="teamCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#teamCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#teamCarousel" data-slide-to="1"></li>
+              <li data-target="#teamCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+              <!-- SLIDE 1 -->
+              <div class="item active">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 1" class="img-responsive center-block">
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 2" class="img-responsive center-block">
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 3" class="img-responsive center-block">
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 2 -->
+              <div class="item">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 2" class="img-responsive center-block">
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 3" class="img-responsive center-block">
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 1" class="img-responsive center-block">
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 3 -->
+              <div class="item">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 3" class="img-responsive center-block">
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 1" class="img-responsive center-block">
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="assets/staff-image.png" alt="Staff 2" class="img-responsive center-block">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <a class="left carousel-control" href="#teamCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#teamCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR STORY SECTION ===== -->
+  <section class="our-story-section">
+    <div class="container">
+      <div class="story-content text-right">
+        <img src="assets/logo-white.png" alt="Dealer Logo" class="dealer-logo">
+        <h2>TRIUMPH OF ANYTOWN</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus, 
+          nisi ut aliquam tincidunt, justo metus eleifend tortor, nec faucibus 
+          purus leo ac risus. Duis vel bibendum odio.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. 
+          Nulla facilisi. Fusce eget lacus non elit tincidunt pretium sit amet quis lectus.
+        </p>
+        <button class="btn-story">OUR STORY</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE STORY SECTION ===== -->
+  <section class="the-story-section">
+    <div class="container">
+      <div class="story-content text-left">
+        <img src="assets/logo-white.png" alt="Dealer Logo" class="dealer-logo">
+        <h3>The Story</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Pellentesque vel sodales tortor, nec congue eros. Sed et nisl sit amet nunc 
+          ultricies congue sit amet a neque.
+        </p>
+        <button class="btn-story">LOCATIONS</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GOOGLE MAPS SECTION ===== -->
+  <section class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.333947666341!2d-122.48106392461247!3d45.52665957107316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a3d943b8e303%3A0xe347ed279a2c7b4!2sTriumph%20Columbia%20River!5e0!3m2!1sen!2sph!4v1730535200000!5m2!1sen!2sph"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+
+  <!-- ===== FEATURED REVIEWS SECTION ===== -->
+  <section class="featured-reviews-section text-center">
+    <div class="container">
+      <h2>FEATURED REVIEWS</h2>
+
+      <!-- Desktop View (Static Grid) -->
+      <div class="row reviews-desktop">
+        <!-- Review 1 -->
+        <div class="col-md-2 review-card">
+          <div class="review-header">
+            <div class="avatar" style="background-color:#DF203A;">S</div>
+            <div class="review-info">
+              <h4>Roy Rogers</h4>
+              <span class="date">2024-10-02</span>
+            </div>
+            <img src="assets/google-icon.png" alt="Google" class="google-icon">
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="https://maps.app.goo.gl/rvw1R1WjGCRqdqdK9" target="_blank" class="btn-read">Read more</a>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-2 review-card">
+          <div class="review-header">
+            <div class="avatar" style="background-color:#808B96;">A</div>
+            <div class="review-info">
+              <h4>Anthony M</h4>
+              <span class="date">2024-10-01</span>
+            </div>
+            <img src="assets/google-icon.png" alt="Google" class="google-icon">
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="https://maps.app.goo.gl/PszNat8rFYEpvMoj9" target="_blank" class="btn-read">Read more</a>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-2 review-card">
+          <div class="review-header">
+            <div class="avatar" style="background-color:#5DADE2;">J</div>
+            <div class="review-info">
+              <h4>Jonas</h4>
+              <span class="date">2024-09-14</span>
+            </div>
+            <img src="assets/google-icon.png" alt="Google" class="google-icon">
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="https://maps.app.goo.gl/fSNb6cCvi3GADksJ6" target="_blank" class="btn-read">Read more</a>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="col-md-2 review-card">
+          <div class="review-header">
+            <div class="avatar" style="background-color:#884EA0;">B</div>
+            <div class="review-info">
+              <h4>Brandon Johnson</h4>
+              <span class="date">2024-09-03</span>
+            </div>
+            <img src="assets/google-icon.png" alt="Google" class="google-icon">
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="https://maps.app.goo.gl/BSQhkVQApq6Cb71i8" target="_blank" class="btn-read">Read more</a>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="col-md-2 review-card">
+          <div class="review-header">
+            <div class="avatar" style="background-color:#E67E22;">D</div>
+            <div class="review-info">
+              <h4>Deasal Conner</h4>
+              <span class="date">2024-08-16</span>
+            </div>
+            <img src="assets/google-icon.png" alt="Google" class="google-icon">
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="https://maps.app.goo.gl/Vpr45zLS3kNdvqe77" target="_blank" class="btn-read">Read more</a>
+        </div>
+      </div>
+
+      <!-- Tablet & Mobile Carousel -->
+      <div id="reviewsCarousel" class="carousel slide reviews-carousel" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#DF203A;">S</div>
+                <div class="review-info">
+                  <h4>Scott Hoofnagle</h4>
+                  <span class="date">2024-10-02</span>
+                </div>
+                <img src="assets/google-icon.png" alt="Google" class="google-icon">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="https://maps.app.goo.gl/rvw1R1WjGCRqdqdK9" target="_blank" class="btn-read">Read more</a>
+            </div>
+          </div>
+          <!-- Duplicate the other 4 reviews here for carousel slides -->
+        </div>
+
+        <!-- Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#reviewsCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#reviewsCarousel" data-slide-to="1"></li>
+          <li data-target="#reviewsCarousel" data-slide-to="2"></li>
+          <li data-target="#reviewsCarousel" data-slide-to="3"></li>
+          <li data-target="#reviewsCarousel" data-slide-to="4"></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER SECTION ===== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-left">
+          <h2>JOIN OUR<br>NEWSLETTER</h2>
+        </div>
+        <div class="col-md-6">
+          <form class="newsletter-form">
+            <input type="email" placeholder="name@domain.com" required>
+            <button type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT, SCHEDULE & QUICK LINKS SECTION ===== -->
+  <section class="contact-schedule-section">
+    <div class="row no-gutters">
+      <!-- LEFT SIDE (#282828) -->
+      <div class="col-md-6 dark-side">
+        <div class="container-fluid px-4"> <!-- Use fluid container -->
+          <div class="row align-items-start">
+            <!-- Left Column - Contact Info -->
+            <div class="col-sm-5 contact-column"> <!-- Reduced width -->
+              <img src="assets/logo-white.png" alt="Dealer Logo" class="dealer-logo">
+              <p class="address">17979 NE Glisan St, Portland, OR 97230</p>
+              <p class="phone">
+                <i class="fa fa-phone phone-icon"></i> 503.000.000
+              </p>
+              
+            <div class="divider-red"></div>
+              
+              <div class="contact-links"> <!-- Links section -->
+                <a href="#" class="link-item">
+                  <i class="fa fa-map-marker icon-red"></i> Maps & Hours
+                </a>
+                <a href="#" class="link-item">
+                  <i class="fa fa-envelope icon-red"></i> Contact Us
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column - Hours -->
+            <div class="col-sm-7 hours-column"> <!-- Increased width -->
+              <!-- Sales Hours -->
+              <div class="hours-section">
+                <h3>SALES HOURS</h3>
+                <ul class="hours-list">
+                  <li><span>Monday</span> CLOSED</li>
+                  <li><span>Tuesday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Wednesday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Thursday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Friday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Saturday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Sunday</span> CLOSED</li>
+                </ul>
+              </div>
+
+              <!-- Service Hours -->
+              <div class="hours-section">
+                <h3>SERVICE HOURS</h3>
+                <ul class="hours-list">
+                  <li><span>Monday</span> CLOSED</li>
+                  <li><span>Tuesday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Wednesday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Thursday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Friday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Saturday</span> 8:30AM - 4:00PM</li>
+                  <li><span>Sunday</span> CLOSED</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE (WHITE) - Keep this part the same -->
+      <div class="col-md-6 light-side">
+        <div class="container">
+          <!-- Upper Half -->
+          <div class="row quick-links">
+            <div class="col-sm-3">
+              <h4>QUICK LINKS</h4>
+              <ul>
+                <li><a href="#">New Bikes</a></li>
+                <li><a href="#">Pre-Owned</a></li>
+                <li><a href="#">Financing</a></li>
+                <li><a href="#">Get a Quote</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-3">
+              <h4>SERVICE DEPT.</h4>
+              <ul>
+                <li><a href="#">Service Appointment</a></li>
+                <li><a href="#">Order Parts</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-3">
+              <h4>DEALER INFO</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Location & Directions</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="divider-black"></div>
+
+          <!-- Lower Half: Social Media -->
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer included via JavaScript -->
+  <div id="footer"></div>
+
+  <!-- Load Header and Footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
