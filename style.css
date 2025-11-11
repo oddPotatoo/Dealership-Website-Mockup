@@ -7,7 +7,6 @@ body {
   width: 100%;
 }
 
-/* Container fixes to prevent overflow */
 .container, .container-fluid {
   max-width: 100%;
   overflow: hidden;
@@ -342,7 +341,7 @@ i.fa-map-marker {
   background-color: #EB1024;
 }
 
-/* ===== MOBILE HEADER (440px and below) ===== */
+/* ===== MOBILE HEADER ===== */
 .mobile-header {
   display: none;
 }
@@ -406,7 +405,7 @@ i.fa-map-marker {
 
 /* Mobile Navigation Menu */
 .mobile-nav-menu {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: -100%;
@@ -469,7 +468,7 @@ i.fa-map-marker {
   display: block;
 }
 
-/* ===== MOBILE BANNER LAYOUT (440px and below) ===== */
+/* ===== MOBILE BANNER LAYOUT ===== */
 @media (max-width: 440px) {
   /* Hide desktop/tablet headers */
   .desktop-header,
@@ -494,13 +493,12 @@ i.fa-map-marker {
     line-height: 1.3;
   }
   
-  /* Mobile banner buttons layout - REORDER ELEMENTS */
+  /* Mobile banner buttons layout - TO REORDER ELEMENTS */
   .banner-content {
     display: flex;
     flex-direction: column;
   }
   
-  /* Ensure buttons come first */
   .banner-buttons {
     order: 1;
     flex-direction: column;
@@ -516,7 +514,6 @@ i.fa-map-marker {
     margin: 0;
   }
   
-  /* Stack SHOP NEW and SHOP PRE-OWNED on top */
   .banner-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -534,7 +531,6 @@ i.fa-map-marker {
     grid-row: 2;
   }
   
-  /* Mobile search bar - POSITION BELOW BUTTONS */
   .search-bar {
     order: 2;
     max-width: 100%;
@@ -552,13 +548,12 @@ i.fa-map-marker {
     display: none !important;
   }
   
-  /* Ensure proper order in banner content */
   .banner-title {
     order: 0;
   }
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   /* Hide specific desktop-only elements */
   .banner-nav-top.desktop-only,
@@ -566,12 +561,10 @@ i.fa-map-marker {
     display: none !important;
   }
   
-  /* Show tablet navigation section */
   .tablet-nav-section {
     display: block;
   }
   
-  /* Adjust banner for tablet */
   .banner-title {
     font-size: 32px;
     margin-top: 20px;
@@ -591,7 +584,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== DESKTOP MODE (1025px and above) ===== */
+/* ===== DESKTOP MODE ===== */
 @media (min-width: 1025px) {
   .mobile-header,
   .tablet-nav-section {
@@ -605,7 +598,6 @@ i.fa-map-marker {
 
 /* ===== RESPONSIVE ADJUSTMENTS FOR ALL MOBILE ===== */
 @media (max-width: 768px) {
-  /* General mobile adjustments */
   .container {
     padding-left: 10px;
     padding-right: 10px;
@@ -648,7 +640,86 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE VIDEO SECTION (440px and below only) ===== */
+/* Tablet Navigation Menu */
+.tablet-nav-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 280px;
+  height: 100%;
+  background: #282828;
+  z-index: 1001;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+.tablet-nav-menu.active {
+  left: 0;
+}
+
+.tablet-nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tablet-nav-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tablet-nav-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.tablet-nav-menu a:hover {
+  background-color: #EB1024;
+}
+
+/* Overlay for tablet menu */
+.tablet-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.tablet-menu-overlay.active {
+  display: block;
+}
+
+.tablet-nav-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 280px;
+  height: 100%;
+  background: #282828;
+  z-index: 1001;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+.header-section {
+  position: relative;
+  z-index: 100;
+}
+
+.tablet-nav-section {
+  position: relative;
+  z-index: 100;
+}
+
+/* ===== MOBILE VIDEO SECTION ===== */
 .mobile-video-section {
   display: none;
   background-color: #f8f8f8;
@@ -701,14 +772,13 @@ i.fa-map-marker {
   transform: scale(1.1);
 }
 
-/* Show mobile video section only on mobile (440px and below) */
+/* Show mobile video section only on mobile */
 @media (max-width: 440px) {
   .mobile-video-section {
     display: block;
   }
 }
 
-/* Hide on larger screens */
 @media (min-width: 441px) {
   .mobile-video-section {
     display: none !important;
@@ -726,15 +796,15 @@ i.fa-map-marker {
 
 .motorcycle-classes .row {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping on desktop */
+  flex-wrap: nowrap;
   justify-content: center;
-  margin: 0 -10px; /* Add some negative margin for spacing */
+  margin: 0 -10px;
 }
 
 .motorcycle-classes .col-md-4 {
-  flex: 0 0 16.666667%; /* 6 columns - 100% / 6 = 16.666667% */
-  max-width: 16.666667%;
-  padding: 0 10px; /* Add horizontal padding for spacing */
+  flex: 0 0 16%;
+  max-width: 16%;
+  padding: 0 10px;
 }
 
 .image-container {
@@ -788,20 +858,20 @@ i.fa-map-marker {
   text-decoration: none;
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   .motorcycle-classes {
     padding: 40px 0 30px;
   }
   
   .motorcycle-classes .row {
-    flex-wrap: wrap; /* Allow wrapping on tablet */
+    flex-wrap: wrap;
     margin: 0 -15px;
   }
   
   .motorcycle-classes .col-md-4 {
-    flex: 0 0 33.333333%; /* 3 columns per row on tablet */
-    max-width: 33.333333%;
+    flex: 0 0 33%;
+    max-width: 33%;
     padding: 0 15px;
     margin-bottom: 30px;
   }
@@ -819,15 +889,15 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (max-width: 768px) {
   .motorcycle-classes {
     padding: 30px 0 20px;
   }
   
   .motorcycle-classes .col-md-4 {
-    flex: 0 0 33.333333%; /* Maintain 3 columns */
-    max-width: 33.333333%;
+    flex: 0 0 33%;
+    max-width: 33%;
     margin-bottom: 25px;
   }
   
@@ -844,10 +914,10 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE (576px and below) ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 576px) {
   .motorcycle-classes .col-md-4 {
-    flex: 0 0 50%; /* 2 columns per row on mobile */
+    flex: 0 0 50%;
     max-width: 50%;
     margin-bottom: 20px;
   }
@@ -870,22 +940,22 @@ i.fa-map-marker {
   width: 100%;
 }
 
-/* ===== MOBILE SECOND BANNER (440px and below) ===== */
+/* ===== MOBILE SECOND BANNER ===== */
 @media (max-width: 440px) {
   .second-banner {
     height: 140px;
-    background-position: center 30%; /* Adjust background position for better mobile view */
+    background-position: center 30%;
   }
 }
 
-/* ===== TABLET SECOND BANNER (441px to 768px) ===== */
+/* ===== TABLET SECOND BANNER ===== */
 @media (min-width: 441px) and (max-width: 768px) {
   .second-banner {
     height: 300px;
   }
 }
 
-/* ===== SMALL DESKTOP SECOND BANNER (769px to 1024px) ===== */
+/* ===== SMALL DESKTOP SECOND BANNER ===== */
 @media (min-width: 769px) and (max-width: 1024px) {
   .second-banner {
     height: 400px;
@@ -992,7 +1062,7 @@ i.fa-map-marker {
   border-radius: 2px;
 }
 
-/* ===== MOBILE MODE (440px and below) ===== */
+/* ===== MOBILE MODE ===== */
 @media (max-width: 440px) {
   .promotions-section {
     background-image: url('assets/phone-event.jpg');
@@ -1069,7 +1139,7 @@ i.fa-map-marker {
   
 }
 
-/* ===== TABLET MODE (441px to 1024px) ===== */
+/* ===== TABLET MODE ===== */
 @media (min-width: 441px) and (max-width: 1024px) {
   .promotions-section {
     background-image: url('assets/tablet-cover.jpg');
@@ -1124,14 +1194,13 @@ i.fa-map-marker {
     display: none;
   }
   
-  /* Adjust column layout for tablet */
   .promo-text {
     width: 100%;
     max-width: 600px;
   }
 }
 
-/* ===== SMALLER TABLETS (441px to 768px) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (min-width: 441px) and (max-width: 768px) {
   .promotions-section {
     min-height: 450px;
@@ -1163,7 +1232,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== DESKTOP MODE (1025px and above) ===== */
+/* ===== DESKTOP MODE ===== */
 @media (min-width: 1025px) {
   .promotions-section {
     background-image: url('assets/cover.png');
@@ -1411,7 +1480,7 @@ i.fa-map-marker {
   right: -1px;
 }
 
-/* Simple Carousel Indicators */
+/* Carousel Indicators */
 .carousel-indicators-container {
   margin-top: 30px;
   text-align: center;
@@ -1445,7 +1514,7 @@ i.fa-map-marker {
   margin: 0 4px;
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   .featured-vehicles {
     padding: 40px 30px;
@@ -1459,16 +1528,14 @@ i.fa-map-marker {
   
   /* Tablet carousel layout - 3 vehicles per slide */
   .featured-vehicles .col-sm-3 {
-    width: 33.333333%;
+    width: 33%;
     float: left;
   }
   
-  /* Hide the 4th vehicle in each slide for tablet */
   .featured-vehicles .row .col-sm-3:nth-child(4) {
     display: none;
   }
   
-  /* Adjust vehicle card for tablet */
   .vehicle-card {
     padding: 10px;
   }
@@ -1497,7 +1564,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (max-width: 768px) {
   .featured-vehicles {
     padding: 30px 20px;
@@ -1526,7 +1593,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE (576px and below) ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 576px) {
   .featured-vehicles {
     padding: 25px 15px;
@@ -1610,7 +1677,6 @@ i.fa-map-marker {
   color: #fff;
 }
 
-/* New wrapper for carousel with external controls */
 .team-carousel-wrapper {
   position: relative;
   display: flex;
@@ -1642,7 +1708,6 @@ i.fa-map-marker {
   transform: scale(1.05);
 }
 
-/* External Carousel Controls */
 .team-carousel-control {
   position: absolute;
   top: 40%;
@@ -1690,13 +1755,13 @@ i.fa-map-marker {
 /* Specific adjustments for left arrow */
 .team-carousel-control-left .glyphicon-chevron-left {
   position: relative;
-  left: -1px; /* Fine-tune left arrow position */
+  left: -1px;
 }
 
 /* Specific adjustments for right arrow */
 .team-carousel-control-right .glyphicon-chevron-right {
   position: relative;
-  right: -1px; /* Fine-tune right arrow position */
+  right: -1px;
 }
 
 .carousel-indicators-container {
@@ -1733,12 +1798,11 @@ i.fa-map-marker {
   margin: 0 4px;
 }
 
-/* Remove original Bootstrap carousel controls */
 #teamCarousel .carousel-control {
   display: none !important;
 }
 
-/* ===== MOBILE MODE (440px and below) ===== */
+/* ===== MOBILE MODE ===== */
 @media (max-width: 440px) {
   .our-team {
     padding: 40px 0;
@@ -1766,12 +1830,10 @@ i.fa-map-marker {
     font-size: 16px;
   }
   
-  /* Mobile carousel adjustments - 2 images per slide */
   .team-carousel-wrapper {
-    padding: 0 50px; /* More padding for controls */
+    padding: 0 50px;
   }
   
-  /* OVERRIDE Bootstrap columns for mobile - Force 2 columns */
   .team-carousel .carousel-inner .row {
     display: flex;
     justify-content: center;
@@ -1779,12 +1841,10 @@ i.fa-map-marker {
     flex-wrap: nowrap;
   }
   
-  /* Hide the third column completely */
   .team-carousel .col-sm-4:nth-child(3) {
     display: none !important;
   }
   
-  /* Make the first two columns take 50% each */
   .team-carousel .col-sm-4 {
     width: 50% !important;
     flex: 0 0 50% !important;
@@ -1837,7 +1897,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== TABLET MODE (441px to 1024px) ===== */
+/* ===== TABLET MODE ===== */
 @media (min-width: 441px) and (max-width: 1024px) {
   .our-team {
     padding: 50px 0;
@@ -1866,7 +1926,7 @@ i.fa-map-marker {
   
   /* Carousel adjustments */
   .team-carousel-wrapper {
-    padding: 0 40px; /* Add padding for controls */
+    padding: 0 40px;
   }
   
   .team-carousel img {
@@ -1893,13 +1953,12 @@ i.fa-map-marker {
     right: 0px;
   }
   
-  /* Tighter indicators */
   .carousel-indicators-container {
     margin-top: 10px;
   }
 }
 
-/* ===== SMALLER TABLETS (441px to 768px) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (min-width: 441px) and (max-width: 768px) {
   .team-carousel-wrapper {
     padding: 0 35px;
@@ -1923,7 +1982,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== DESKTOP MODE (1025px and above) ===== */
+/* ===== DESKTOP MODE ===== */
 @media (min-width: 1025px) {
   .team-carousel img {
     width: 200px;
@@ -2056,7 +2115,7 @@ i.fa-map-marker {
   margin-left: 100px;
 }
 
-/* ===== MOBILE MODE (440px and below) ===== */
+/* ===== MOBILE MODE ===== */
 @media (max-width: 440px) {
   .our-story-section,
   .the-story-section {
@@ -2064,7 +2123,6 @@ i.fa-map-marker {
     background-position: center;
   }
   
-  /* CENTER EVERYTHING FOR MOBILE */
   .story-content {
     max-width: 100% !important;
     width: 100%;
@@ -2108,7 +2166,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   .our-story-section,
   .the-story-section {
@@ -2116,7 +2174,6 @@ i.fa-map-marker {
     background-position: center;
   }
   
-  /* Full width content for tablet */
   .story-content {
     max-width: 100% !important;
     width: 100%;
@@ -2153,9 +2210,8 @@ i.fa-map-marker {
   }
 }
 
-/* ===== DESKTOP MODE (1025px and above) ===== */
+/* ===== DESKTOP MODE ===== */
 @media (min-width: 1025px) {
-  /* Restore original desktop layouts */
   .our-story-section .story-content {
     margin-left: auto;
     text-align: right;
@@ -2184,7 +2240,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (max-width: 768px) {
   .our-story-section,
   .the-story-section {
@@ -2222,7 +2278,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALL MOBILE (below 360px) ===== */
+/* ===== SMALL MOBILE ===== */
 @media (max-width: 360px) {
   .our-story-section,
   .the-story-section {
@@ -2316,7 +2372,7 @@ i.fa-map-marker {
   font-size: 26px;
 }
 
-/* Desktop Layout - WIDER CONTAINER */
+/* Desktop Layout */
 .reviews-desktop {
   display: flex;
   justify-content: center;
@@ -2327,7 +2383,7 @@ i.fa-map-marker {
   overflow-x: auto;
 }
 
-/* Hide all carousels by default */
+/* Hide all carousels default */
 .reviews-carousel-tablet,
 .reviews-carousel-mobile {
   display: none;
@@ -2376,7 +2432,7 @@ i.fa-map-marker {
 .review-info {
   flex: 1;
   margin-left: 15px;
-  min-width: 0; /* Prevents text overflow */
+  min-width: 0;
 }
 
 .review-info h4 {
@@ -2478,7 +2534,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   .featured-reviews-section {
     padding: 60px 0;
@@ -2509,7 +2565,7 @@ i.fa-map-marker {
   
   /* Ensure 3 cards per row in tablet */
   .reviews-carousel-tablet .col-md-4 {
-    width: 33.333333%;
+    width: 33%;
     float: left;
     margin-bottom: 20px;
   }
@@ -2531,7 +2587,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (max-width: 768px) {
   .featured-reviews-section {
     padding: 50px 0;
@@ -2559,7 +2615,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE MODE (440px and below) ===== */
+/* ===== MOBILE MODE ===== */
 @media (max-width: 440px) {
   .featured-reviews-section {
     padding: 40px 0;
@@ -2684,7 +2740,7 @@ i.fa-map-marker {
   transform: scale(1.05);
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   .newsletter-section {
     padding: 50px 60px;
@@ -2701,7 +2757,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE MODE (440px and below) ===== */
+/* ===== MOBILE MODE ===== */
 @media (max-width: 440px) {
   .newsletter-section {
     padding: 40px 20px;
@@ -2773,7 +2829,6 @@ i.fa-map-marker {
     min-width: 100px;
   }
   
-  /* Ensure columns take full width on mobile */
   .col-md-6 {
     width: 100%;
     padding: 0;
@@ -2784,7 +2839,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALL MOBILE (below 360px) ===== */
+/* ===== SMALL MOBILE ===== */
 @media (max-width: 360px) {
   .newsletter-section {
     padding: 30px 15px;
@@ -2813,19 +2868,19 @@ i.fa-map-marker {
 
 @media (max-width: 991px) {
   .newsletter-section h2 {
-    text-align: left; /* Changed from center */
+    text-align: left;
     margin-bottom: 25px;
   }
 
   .newsletter-form {
-    justify-content: flex-start; /* Changed from center */
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 767px) {
   .newsletter-form {
-    flex-direction: row; /* Changed from column */
-    gap: 10px; /* Changed from 10px */
+    flex-direction: row;
+    gap: 10px;
     align-items: flex-end;
   }
 
@@ -2835,7 +2890,7 @@ i.fa-map-marker {
   }
 
   .newsletter-form button {
-    width: auto; /* Changed from 100% */
+    width: auto;
     min-width: 100px;
   }
 }
@@ -3018,7 +3073,7 @@ i.fa-map-marker {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
+/* ===== TABLET MODE ===== */
 @media (max-width: 1024px) {
   .contact-schedule-section .row.no-gutters {
     display: flex;
@@ -3083,7 +3138,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
+/* ===== SMALLER TABLETS ===== */
 @media (max-width: 768px) {
   .dark-side {
     padding: 40px 0;
@@ -3133,7 +3188,7 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE (576px and below) ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 576px) {
   .dark-side {
     padding: 30px 0;
