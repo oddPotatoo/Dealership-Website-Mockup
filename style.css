@@ -3413,6 +3413,12 @@ i.fa-map-marker {
     padding: 15px 0 10px;
   }
 
+  .dealer-logo {
+    align-content: left !important;
+    text-align: left !important;
+    margin: 0 auto 20px 0 !important;
+  }
+
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
