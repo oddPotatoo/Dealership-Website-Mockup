@@ -1,31 +1,64 @@
 <!-- HEADER -->
 <header class="header-section">
   <div class="container">
-    <div class="row header-content align-items-center">
-      <!-- Logo -->
-      <div class="col-md-3 col-xs-6">
-        <a href="#"><img src="assets/logo.png" alt="Logo" class="logo img-responsive"></a>
+    <!-- Mobile Header (440px and below) -->
+    <div class="mobile-header">
+      <div class="mobile-header-content">
+        <!-- Hamburger Icon -->
+        <button class="mobile-hamburger" id="mobileHamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <!-- Logo -->
+        <div class="mobile-logo">
+          <a href="#"><img src="assets/logo.png" alt="Logo" class="logo"></a>
+        </div>
+        
+        <!-- Right Icons -->
+        <div class="mobile-right-icons">
+          <a href="#" class="mobile-icon">
+            <i class="bi bi-geo-alt-fill"></i>
+          </a>
+          <a href="#" class="mobile-icon">
+            <i class="fa fa-phone"></i>
+          </a>
+          <a href="#" class="mobile-icon">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
       </div>
+    </div>
 
-      <!-- Header Right Info -->
-      <div class="col-md-9 col-xs-12 header-right">
-        <!-- Top row: Address and Phone -->
-        <div class="top-info">
-          <span class="address-header"><i class="fa fa-map-marker"></i> 17979 NE Glisan St, Portland, OR 97230</span>
-          <span class="divider-header"></span>
-          <span class="phone-header"><strong>503.000.000</strong></span>
+    <!-- Desktop/Tablet Header -->
+    <div class="desktop-header">
+      <div class="row header-content align-items-center">
+        <!-- Logo -->
+        <div class="col-md-3 col-xs-6">
+          <a href="#"><img src="assets/logo.png" alt="Logo" class="logo img-responsive"></a>
         </div>
 
-        <!-- Bottom row: Socials and Buttons -->
-        <div class="bottom-info">
-          <div class="social-icons">
-            <button class="btn btn-link"><i class="fa fa-facebook"></i></button>
-            <button class="btn btn-link"><i class="fa fa-instagram"></i></button>
-            <button class="btn btn-link"><i class="fa fa-youtube"></i></button>
+        <!-- Header Right Info -->
+        <div class="col-md-9 col-xs-12 header-right">
+          <!-- Top row: Address and Phone -->
+          <div class="top-info">
+            <span class="address-header"><i class="fa fa-map-marker"></i> 17979 NE Glisan St, Portland, OR 97230</span>
+            <span class="divider-header"></span>
+            <span class="phone-header"><strong>503.000.000</strong></span>
           </div>
-          <div class="header-buttons">
-            <button class="btn btn-event">EVENT</button>
-            <span class="trade-text">VALUE YOUR TRADE <i class="fa fa-refresh"></i></span>
+
+          <!-- Bottom row: Socials and Buttons -->
+          <div class="bottom-info">
+            <div class="social-icons">
+              <button class="btn btn-link"><i class="fa fa-facebook"></i></button>
+              <button class="btn btn-link"><i class="fa fa-instagram"></i></button>
+              <button class="btn btn-link"><i class="fa fa-youtube"></i></button>
+            </div>
+            <div class="header-buttons">
+              <button class="btn btn-event">EVENT</button>
+              <span class="trade-text">VALUE YOUR TRADE <i class="fa fa-refresh"></i></span>
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +82,19 @@
     </div>
   </div>
 </section>
+
+<!-- Mobile Navigation Menu -->
+<nav class="mobile-nav-menu" id="mobileNavMenu">
+  <ul>
+    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="#"><i class="fa fa-tag"></i> Amazing Deals</a></li>
+    <li><a href="#"><i class="fa fa-motorcycle"></i> Motorcycles</a></li>
+    <li><a href="#"><i class="fa fa-wrench"></i> Service</a></li>
+    <li><a href="#"><i class="fa fa-cogs"></i> Parts</a></li>
+    <li><a href="#"><i class="fa fa-money"></i> Financing</a></li>
+    <li><a href="#"><i class="fa fa-info-circle"></i> About Us</a></li>
+  </ul>
+</nav>
 
 <!-- Tablet Navigation Menu -->
 <nav class="tablet-nav-menu" id="tabletNavMenu">
@@ -85,7 +131,7 @@
       <p class="banner-subtitle desktop-only">LIVE THE PASSION, TAKE THE RIDE.</p>
 
       <!-- Desktop Search Bar -->
-      <div class="search-bar">
+      <div class="search-bar desktop-only">
         <input type="text" class="form-control" placeholder="SEARCH RIDES">
         <i class="fa fa-search search-icon"></i>
       </div>
@@ -95,6 +141,18 @@
         <button class="btn btn-banner">SHOP NEW</button>
         <button class="btn btn-banner">SHOP PRE-OWNED</button>
         <button class="btn btn-banner">SPECIALS</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE VIDEO SECTION (440px and below only) -->
+<section class="mobile-video-section">
+  <div class="container">
+    <div class="mobile-video-container">
+      <img src="assets/video.png" alt="Video Placeholder" class="mobile-video-placeholder">
+      <div class="video-play-overlay">
+        <i class="fa fa-play-circle"></i>
       </div>
     </div>
   </div>

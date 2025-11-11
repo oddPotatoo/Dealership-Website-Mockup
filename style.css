@@ -342,6 +342,222 @@ i.fa-map-marker {
   background-color: #EB1024;
 }
 
+/* ===== MOBILE HEADER (440px and below) ===== */
+.mobile-header {
+  display: none;
+}
+
+.mobile-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.mobile-hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  padding: 0;
+}
+
+.mobile-hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.mobile-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.mobile-logo .logo {
+  max-height: 35px;
+  width: auto;
+}
+
+.mobile-right-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.mobile-icon {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-icon:hover {
+  color: #EB1024;
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 280px;
+  height: 100%;
+  background: #282828;
+  z-index: 1001;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+.mobile-nav-menu.active {
+  left: 0;
+}
+
+.mobile-nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-menu li {
+  border-bottom: 1px solid #444;
+}
+
+.mobile-nav-menu a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.mobile-nav-menu a:hover {
+  background: #EB1024;
+  color: #fff;
+}
+
+.mobile-nav-menu i {
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Overlay for mobile menu */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+}
+
+/* ===== MOBILE BANNER LAYOUT (440px and below) ===== */
+@media (max-width: 440px) {
+  /* Hide desktop/tablet headers */
+  .desktop-header,
+  .tablet-nav-section {
+    display: none !important;
+  }
+  
+  /* Show mobile header */
+  .mobile-header {
+    display: block;
+  }
+  
+  /* Mobile banner adjustments */
+  .banner-section .overlay {
+    padding: 40px 10px;
+  }
+  
+  .banner-title {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    line-height: 1.3;
+  }
+  
+  /* Mobile banner buttons layout - REORDER ELEMENTS */
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure buttons come first */
+  .banner-buttons {
+    order: 1;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .banner-buttons .btn-banner {
+    min-width: 100%;
+    height: 45px;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Stack SHOP NEW and SHOP PRE-OWNED on top */
+  .banner-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+  
+  .banner-buttons .btn-banner:nth-child(1),
+  .banner-buttons .btn-banner:nth-child(2) {
+    grid-row: 1;
+  }
+  
+  .banner-buttons .btn-banner:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  
+  /* Mobile search bar - POSITION BELOW BUTTONS */
+  .search-bar {
+    order: 2;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  .search-bar input {
+    height: 45px;
+    font-size: 14px;
+  }
+  
+  /* Hide desktop elements */
+  .banner-nav-top,
+  .banner-subtitle {
+    display: none !important;
+  }
+  
+  /* Ensure proper order in banner content */
+  .banner-title {
+    order: 0;
+  }
+}
+
 /* ===== TABLET MODE (1024px and below) ===== */
 @media (max-width: 1024px) {
   /* Hide specific desktop-only elements */
@@ -362,12 +578,12 @@ i.fa-map-marker {
   }
   
   .search-bar {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto 30px;
   }
   
   .banner-buttons {
-    max-width: 90%;
+    max-width: 100%;
   }
   
   .banner-buttons .btn-banner {
@@ -375,20 +591,127 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
-@media (max-width: 768px) {
-  .banner-title {
-    font-size: 28px;
+/* ===== DESKTOP MODE (1025px and above) ===== */
+@media (min-width: 1025px) {
+  .mobile-header,
+  .tablet-nav-section {
+    display: none;
   }
   
-  .banner-buttons {
-    flex-direction: column;
-    align-items: center;
+  .desktop-header {
+    display: block;
+  }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS FOR ALL MOBILE ===== */
+@media (max-width: 768px) {
+  /* General mobile adjustments */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .banner-section .overlay {
+    padding: 50px 10px;
+  }
+  
+  .banner-title {
+    font-size: 24px;
+  }
+}
+
+/* ===== VERY SMALL MOBILE DEVICES ===== */
+@media (max-width: 360px) {
+  .mobile-header-content {
+    padding: 0 10px;
+  }
+  
+  .mobile-right-icons {
+    gap: 10px;
+  }
+  
+  .mobile-icon {
+    font-size: 14px;
+  }
+  
+  .mobile-logo .logo {
+    max-height: 30px;
+  }
+  
+  .banner-title {
+    font-size: 20px;
   }
   
   .banner-buttons .btn-banner {
-    width: 100%;
-    max-width: 300px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+/* ===== MOBILE VIDEO SECTION (440px and below only) ===== */
+.mobile-video-section {
+  display: none;
+  background-color: #f8f8f8;
+}
+
+.mobile-video-container {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 440px;
+  height: 240px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.mobile-video-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.video-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.video-play-overlay:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-play-overlay i {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.video-play-overlay:hover i {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Show mobile video section only on mobile (440px and below) */
+@media (max-width: 440px) {
+  .mobile-video-section {
+    display: block;
+  }
+}
+
+/* Hide on larger screens */
+@media (min-width: 441px) {
+  .mobile-video-section {
+    display: none !important;
   }
 }
 
@@ -547,6 +870,28 @@ i.fa-map-marker {
   width: 100%;
 }
 
+/* ===== MOBILE SECOND BANNER (440px and below) ===== */
+@media (max-width: 440px) {
+  .second-banner {
+    height: 140px;
+    background-position: center 30%; /* Adjust background position for better mobile view */
+  }
+}
+
+/* ===== TABLET SECOND BANNER (441px to 768px) ===== */
+@media (min-width: 441px) and (max-width: 768px) {
+  .second-banner {
+    height: 300px;
+  }
+}
+
+/* ===== SMALL DESKTOP SECOND BANNER (769px to 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .second-banner {
+    height: 400px;
+  }
+}
+
 /* ===== PROMOTIONS & EVENTS ===== */
 .promotions-section {
   background-image: url('assets/cover.png');
@@ -647,14 +992,91 @@ i.fa-map-marker {
   border-radius: 2px;
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
-@media (max-width: 1024px) {
+/* ===== MOBILE MODE (440px and below) ===== */
+@media (max-width: 440px) {
+  .promotions-section {
+    background-image: url('assets/phone-event.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .promo-container {
+    padding: 0 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .promo-text {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .promo-text h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .expandable {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .expand-item {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .expand-header {
+    font-size: 16px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .expandable ul {
+    margin: 8px 0 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .expandable ul li {
+    font-size: 14px;
+    margin: 6px 0;
+    text-align: left;
+    padding-left: 0;
+  }
+  
+  /* Hide promo image in mobile mode */
+  .promo-image {
+    display: none;
+  }
+  
+}
+
+/* ===== TABLET MODE (441px to 1024px) ===== */
+@media (min-width: 441px) and (max-width: 1024px) {
   .promotions-section {
     background-image: url('assets/tablet-cover.jpg');
     background-size: cover;
     min-height: 500px;
     display: flex;
-    align-items: center;
+    align-items: center top;
     justify-content: center;
   }
   
@@ -671,7 +1093,7 @@ i.fa-map-marker {
   
   .promo-text h2 {
     font-size: 22px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 150px;
     max-width: 70%;
   }
@@ -709,8 +1131,8 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
-@media (max-width: 768px) {
+/* ===== SMALLER TABLETS (441px to 768px) ===== */
+@media (min-width: 441px) and (max-width: 768px) {
   .promotions-section {
     min-height: 450px;
   }
@@ -722,14 +1144,14 @@ i.fa-map-marker {
   }
   
   .expandable {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
   }
   
   .expand-item {
-    width: 100%;
-    max-width: 280px;
+    width: 45%;
+    max-width: 200px;
   }
   
   .expand-header {
@@ -738,6 +1160,19 @@ i.fa-map-marker {
   
   .expandable ul li {
     font-size: 13px;
+  }
+}
+
+/* ===== DESKTOP MODE (1025px and above) ===== */
+@media (min-width: 1025px) {
+  .promotions-section {
+    background-image: url('assets/cover.png');
+    background-size: 100%;
+    min-height: 600px;
+  }
+  
+  .promo-image {
+    display: block;
   }
 }
 
@@ -1303,8 +1738,107 @@ i.fa-map-marker {
   display: none !important;
 }
 
-/* ===== TABLET MODE (1024px and below) ===== */
-@media (max-width: 1024px) {
+/* ===== MOBILE MODE (440px and below) ===== */
+@media (max-width: 440px) {
+  .our-team {
+    padding: 40px 0;
+  }
+  
+  /* Text section adjustments for mobile */
+  .team-text {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .text-container {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .team-text h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-meet-staff {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  /* Mobile carousel adjustments - 2 images per slide */
+  .team-carousel-wrapper {
+    padding: 0 50px; /* More padding for controls */
+  }
+  
+  /* OVERRIDE Bootstrap columns for mobile - Force 2 columns */
+  .team-carousel .carousel-inner .row {
+    display: flex;
+    justify-content: center;
+    margin: 0 -5px;
+    flex-wrap: nowrap;
+  }
+  
+  /* Hide the third column completely */
+  .team-carousel .col-sm-4:nth-child(3) {
+    display: none !important;
+  }
+  
+  /* Make the first two columns take 50% each */
+  .team-carousel .col-sm-4 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 0 5px;
+    display: block !important;
+  }
+  
+  .team-carousel img {
+    width: 150px;
+    height: 160px;
+    max-width: 160px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Larger mobile controls */
+  .team-carousel-control {
+    width: 20px;
+    height: 20px;
+    top: 40%;
+  }
+  
+  .team-carousel-control .glyphicon {
+    font-size: 15px;
+  }
+  
+  .team-carousel-control-left {
+    left: 5px;
+  }
+  
+  .team-carousel-control-right {
+    right: 5px;
+  }
+  
+  /* Mobile indicators */
+  .carousel-indicators-container {
+    margin-top: 25px;
+  }
+  
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+  }
+  
+  .carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* ===== TABLET MODE (441px to 1024px) ===== */
+@media (min-width: 441px) and (max-width: 1024px) {
   .our-team {
     padding: 50px 0;
   }
@@ -1365,8 +1899,8 @@ i.fa-map-marker {
   }
 }
 
-/* ===== SMALLER TABLETS (768px and below) ===== */
-@media (max-width: 768px) {
+/* ===== SMALLER TABLETS (441px to 768px) ===== */
+@media (min-width: 441px) and (max-width: 768px) {
   .team-carousel-wrapper {
     padding: 0 35px;
   }
@@ -1386,6 +1920,14 @@ i.fa-map-marker {
   
   .team-carousel-control-right {
     right: 2px;
+  }
+}
+
+/* ===== DESKTOP MODE (1025px and above) ===== */
+@media (min-width: 1025px) {
+  .team-carousel img {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -1501,10 +2043,69 @@ i.fa-map-marker {
   cursor: pointer;
   font-size: 18px;
   transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 100px;
 }
 
 .btn-story:hover {
   color: #EB1024;
+}
+
+.btn-story .fa-angle-right {
+  margin-left: 100px;
+}
+
+/* ===== MOBILE MODE (440px and below) ===== */
+@media (max-width: 440px) {
+  .our-story-section,
+  .the-story-section {
+    padding: 50px 0;
+    background-position: center;
+  }
+  
+  /* CENTER EVERYTHING FOR MOBILE */
+  .story-content {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 0 20px;
+  }
+  
+  .dealer-logo {
+    width: 100px;
+    margin: 0 auto 20px !important;
+    display: block;
+  }
+  
+  .our-story-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .the-story-section h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  
+  .our-story-section p,
+  .the-story-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .btn-story {
+    font-size: 16px;
+    margin: 10px auto 0;
+    display: block;
+    text-align: center;
+  }
 }
 
 /* ===== TABLET MODE (1024px and below) ===== */
@@ -1552,6 +2153,37 @@ i.fa-map-marker {
   }
 }
 
+/* ===== DESKTOP MODE (1025px and above) ===== */
+@media (min-width: 1025px) {
+  /* Restore original desktop layouts */
+  .our-story-section .story-content {
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  .the-story-section .story-content {
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .dealer-logo {
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+  
+  .our-story-section h2,
+  .the-story-section h3,
+  .our-story-section p,
+  .the-story-section p {
+    text-align: inherit;
+  }
+  
+  .btn-story {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
 /* ===== SMALLER TABLETS (768px and below) ===== */
 @media (max-width: 768px) {
   .our-story-section,
@@ -1590,15 +2222,15 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE (576px and below) ===== */
-@media (max-width: 576px) {
+/* ===== SMALL MOBILE (below 360px) ===== */
+@media (max-width: 360px) {
   .our-story-section,
   .the-story-section {
-    padding: 50px 0;
+    padding: 40px 0;
   }
   
   .story-content {
-    padding: 0 20px;
+    padding: 0 15px;
   }
   
   .dealer-logo {
@@ -1610,7 +2242,7 @@ i.fa-map-marker {
   }
   
   .the-story-section h3 {
-    font-size: 17px;
+    font-size: 18px;
   }
   
   .our-story-section p,
@@ -1619,7 +2251,7 @@ i.fa-map-marker {
   }
   
   .btn-story {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -1693,6 +2325,12 @@ i.fa-map-marker {
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
+}
+
+/* Hide all carousels by default */
+.reviews-carousel-tablet,
+.reviews-carousel-mobile {
+  display: none;
 }
 
 .review-card {
@@ -1797,16 +2435,6 @@ i.fa-map-marker {
   border-bottom: 1px solid #EB1024;
 }
 
-/* Carousel Styles */
-.reviews-carousel {
-  display: none;
-}
-
-/* Hide carousel controls for all devices */
-.carousel-control-review {
-  display: none !important;
-}
-
 /* Carousel Indicators */
 .carousel-indicators-container {
   margin-top: 30px;
@@ -1866,13 +2494,13 @@ i.fa-map-marker {
     display: none;
   }
   
-  /* Show carousel for tablet */
-  .reviews-carousel {
+  /* Show tablet carousel */
+  .reviews-carousel-tablet {
     display: block;
   }
   
   /* Tablet carousel layout - 3 reviews per slide */
-  .reviews-carousel .review-card {
+  .reviews-carousel-tablet .review-card {
     width: 280px;
     min-width: 280px;
     height: 234px;
@@ -1880,15 +2508,10 @@ i.fa-map-marker {
   }
   
   /* Ensure 3 cards per row in tablet */
-  .reviews-carousel .col-md-4 {
+  .reviews-carousel-tablet .col-md-4 {
     width: 33.333333%;
     float: left;
     margin-bottom: 20px;
-  }
-  
-  /* Show all 3 cards in tablet mode */
-  .tablet-only {
-    display: block !important;
   }
   
   /* Adjust carousel indicators for tablet */
@@ -1919,21 +2542,16 @@ i.fa-map-marker {
     margin-bottom: 30px;
   }
   
-  /* Switch to 1 card per slide on mobile */
-  .reviews-carousel .col-md-4 {
+  /* Switch to 1 card per slide on smaller tablets */
+  .reviews-carousel-tablet .col-md-4 {
     width: 100%;
     margin-bottom: 15px;
   }
   
-  .reviews-carousel .review-card {
+  .reviews-carousel-tablet .review-card {
     width: 300px;
     min-width: 300px;
     height: 234px;
-  }
-  
-  /* Hide extra cards on mobile */
-  .tablet-only {
-    display: none !important;
   }
   
   .carousel-indicators-container {
@@ -1941,25 +2559,57 @@ i.fa-map-marker {
   }
 }
 
-/* ===== MOBILE (576px and below) ===== */
-@media (max-width: 576px) {
+/* ===== MOBILE MODE (440px and below) ===== */
+@media (max-width: 440px) {
   .featured-reviews-section {
     padding: 40px 0;
   }
   
   .featured-reviews-section h2 {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   
-  .reviews-carousel .review-card {
+  /* Hide desktop and tablet layouts */
+  .reviews-desktop,
+  .reviews-carousel-tablet {
+    display: none !important;
+  }
+  
+  /* Show mobile carousel */
+  .reviews-carousel-mobile {
+    display: block;
+  }
+  
+  /* Mobile carousel - 1 review per slide */
+  .reviews-carousel-mobile .review-card {
     width: 280px;
     min-width: 280px;
     height: 250px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
-  .review-card {
-    padding: 20px;
+  /* Mobile-specific review card adjustments */
+  .reviews-carousel-mobile .review-header {
+    margin-bottom: 12px;
+  }
+  
+  .reviews-carousel-mobile .stars {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  
+  .reviews-carousel-mobile .review-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+  
+  /* Mobile indicators */
+  .carousel-indicators-container {
+    margin-top: 20px;
   }
   
   .carousel-indicators li {
@@ -2034,22 +2684,149 @@ i.fa-map-marker {
   transform: scale(1.05);
 }
 
-/* RESPONSIVE */
-@media (max-width: 991px) {
+/* ===== TABLET MODE (1024px and below) ===== */
+@media (max-width: 1024px) {
+  .newsletter-section {
+    padding: 50px 60px;
+  }
+  
   .newsletter-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 32px;
+    text-align: left;
+  }
+  
+  .newsletter-form {
+    justify-content: flex-start;
+    padding: 20px 0px;
+  }
+}
+
+/* ===== MOBILE MODE (440px and below) ===== */
+@media (max-width: 440px) {
+  .newsletter-section {
+    padding: 40px 20px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .row.align-items-center {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .newsletter-section h2 {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 0;
+    width: 100%;
+    white-space: nowrap;
+  }
+  
+  .newsletter-section h2 br {
+    display: none;
   }
 
   .newsletter-form {
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    max-width: none;
+    text-align: left;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+  }
+  
+  .newsletter-form input::placeholder {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .newsletter-form button {
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: auto;
+    min-width: 100px;
+  }
+  
+  /* Ensure columns take full width on mobile */
+  .col-md-6 {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .text-left {
+    text-align: left !important;
+  }
+}
+
+/* ===== SMALL MOBILE (below 360px) ===== */
+@media (max-width: 360px) {
+  .newsletter-section {
+    padding: 30px 15px;
+  }
+  
+  .newsletter-section h2 {
+    font-size: 24px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .newsletter-form input {
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .newsletter-form button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .newsletter-section h2 {
+    text-align: left; /* Changed from center */
+    margin-bottom: 25px;
+  }
+
+  .newsletter-form {
+    justify-content: flex-start; /* Changed from center */
   }
 }
 
 @media (max-width: 767px) {
   .newsletter-form {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row; /* Changed from column */
+    gap: 10px; /* Changed from 10px */
+    align-items: flex-end;
   }
 
   .newsletter-form input {
@@ -2058,7 +2835,8 @@ i.fa-map-marker {
   }
 
   .newsletter-form button {
-    width: 100%;
+    width: auto; /* Changed from 100% */
+    min-width: 100px;
   }
 }
 
@@ -2335,7 +3113,7 @@ i.fa-map-marker {
   .quick-links .col-sm-3 {
     width: 100%;
     margin-bottom: 25px;
-    text-align: center;
+    text-align: left;
   }
   
   .quick-links h4 {
@@ -2592,15 +3370,17 @@ i.fa-map-marker {
   }
 
   .pixel-motion-logo img {
-    max-width: 90px;
+    max-width: 250px;
   }
 
   .copyright p {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .disclaimer p {
     font-size: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 

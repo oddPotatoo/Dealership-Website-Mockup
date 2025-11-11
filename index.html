@@ -465,7 +465,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. 
           Nulla facilisi. Fusce eget lacus non elit tincidunt pretium sit amet quis lectus.
         </p>
-        <button class="btn-story">OUR STORY</button>
+        <button class="btn-story">OUR STORY<i class="fa fa-angle-right icon-red"></i></button>
       </div>
     </div>
   </section>
@@ -481,7 +481,7 @@
           Pellentesque vel sodales tortor, nec congue eros. Sed et nisl sit amet nunc 
           ultricies congue sit amet a neque.
         </p>
-        <button class="btn-story">LOCATIONS</button>
+        <button class="btn-story">LOCATIONS<i class="fa fa-angle-right icon-red"></i></button>
       </div>
     </div>
   </section>
@@ -574,8 +574,8 @@
         </div>
       </div>
 
-      <!-- Tablet & Mobile Carousel -->
-      <div id="reviewsCarousel" class="carousel slide reviews-carousel" data-ride="carousel" data-interval="false">
+      <!-- Tablet Carousel (3 reviews per slide) -->
+      <div id="reviewsCarouselTablet" class="carousel slide reviews-carousel-tablet" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
           <!-- Slide 1 - 3 reviews for tablet -->
           <div class="item active">
@@ -667,14 +667,116 @@
           </div>
         </div>
 
-        <!-- Carousel Indicators Only (No Controls) -->
+        <!-- Carousel Indicators for Tablet -->
         <div class="carousel-indicators-container">
           <ol class="carousel-indicators">
-            <li data-target="#reviewsCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#reviewsCarousel" data-slide-to="1"></li>
+            <li data-target="#reviewsCarouselTablet" data-slide-to="0" class="active"></li>
+            <li data-target="#reviewsCarouselTablet" data-slide-to="1"></li>
           </ol>
         </div>
       </div>
+
+      <!-- Mobile Carousel (1 review per slide) -->
+      <div id="reviewsCarouselMobile" class="carousel slide reviews-carousel-mobile" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="item active">
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#DF203A;">S</div>
+                <div class="review-info">
+                  <h4>Scott Hochtagle</h4>
+                  <span class="date">2024-06-02</span>
+                </div>
+                <img src="assets/google-icon.png" alt="Google" class="google-icon">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="https://maps.app.goo.gl/rvw1R1WjGCRqdqdK9" target="_blank" class="btn-read">Read more</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="item">
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#808B96;">A</div>
+                <div class="review-info">
+                  <h4>Anthony M</h4>
+                  <span class="date">2024-08-06</span>
+                </div>
+                <img src="assets/google-icon.png" alt="Google" class="google-icon">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="https://maps.app.goo.gl/PszNat8rFYEpvMoj9" target="_blank" class="btn-read">Read more</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="item">
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#5DADE2;">J</div>
+                <div class="review-info">
+                  <h4>Jonas</h4>
+                  <span class="date">2024-06-14</span>
+                </div>
+                <img src="assets/google-icon.png" alt="Google" class="google-icon">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="https://maps.app.goo.gl/fSNb6cCvi3GADksJ6" target="_blank" class="btn-read">Read more</a>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="item">
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#884EA0;">B</div>
+                <div class="review-info">
+                  <h4>Brandon Johnson</h4>
+                  <span class="date">2024-06-03</span>
+                </div>
+                <img src="assets/google-icon.png" alt="Google" class="google-icon">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="https://maps.app.goo.gl/BSQhkVQApq6Cb71i8" target="_blank" class="btn-read">Read more</a>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="item">
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#E67E22;">D</div>
+                <div class="review-info">
+                  <h4>Dessal Conner</h4>
+                  <span class="date">2024-08-16</span>
+                </div>
+                <img src="assets/google-icon.png" alt="Google" class="google-icon">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="https://maps.app.goo.gl/Vpr45zLS3kNdvqe77" target="_blank" class="btn-read">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Indicators for Mobile (5 indicators) -->
+        <div class="carousel-indicators-container">
+          <ol class="carousel-indicators">
+            <li data-target="#reviewsCarouselMobile" data-slide-to="0" class="active"></li>
+            <li data-target="#reviewsCarouselMobile" data-slide-to="1"></li>
+            <li data-target="#reviewsCarouselMobile" data-slide-to="2"></li>
+            <li data-target="#reviewsCarouselMobile" data-slide-to="3"></li>
+            <li data-target="#reviewsCarouselMobile" data-slide-to="4"></li>
+          </ol>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== NEWSLETTER SECTION ===== -->
@@ -682,7 +784,7 @@
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-md-6 text-left">
-          <h2>JOIN OUR<br>NEWSLETTER</h2>
+          <h2>JOIN OUR <br>NEWSLETTER</h2>
         </div>
         <div class="col-md-6">
           <form class="newsletter-form">
@@ -713,7 +815,7 @@
               
               <div class="contact-links">
                 <a href="#" class="link-item">
-                  <i class="fa fa-map-marker icon-red"></i> Maps & Hours
+                  <i class="bi bi-geo-alt-fill icon-red"></i> Maps & Hours
                 </a>
                 <a href="#" class="link-item">
                   <i class="fa fa-envelope icon-red"></i> Contact Us
