@@ -63,8 +63,10 @@ Triumph of Anytown is a fully responsive dealership website showcasing motorcycl
 
 ## 🖼️ Mobile Phone
   <div align="center">
-    <img src="assets/ocr_non-resident_logs_page.png" alt="UI Preview" width="600"/>
-    <img src="assets/ocr_overdues_page.png" alt="UI Preview" width="600"/>
+    <img src="assets/ui-showcase/mobile-1.png" alt="UI Preview" width="200"/>
+    <img src="assets/ui-showcase/mobile-2.png" alt="UI Preview" width="200"/>
+    <img src="assets/ui-showcase/mobile-3.png" alt="UI Preview" width="200"/>
+    <img src="assets/ui-showcase/mobile-4.png" alt="UI Preview" width="200"/>
   </div>
 
 ## 📱 Responsive Breakpoints
